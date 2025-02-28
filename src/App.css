@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+#root {
+  margin: 0 auto;
+}
+
+.inter-200 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.inter-300 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inter-400 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-500 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.inter-700 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+main {
+  .left {
+    .list-section {
+      .list {
+        margin-bottom: 2.0rem;
+        ul {
+          li {
+            padding: 2px;
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    .company, .date {
+      padding: 0.1em 0;
+    }
+    .job {
+      margin-bottom: 0.6rem;
+    }
+    ul {
+      padding: 1.0em;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      li {
+        padding: 2px;
+      }
+    }
+  }
+}
+
+.headline {
+  padding-bottom: 8px;
+  font-size: 1.0rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #363636;
+}
+
+.subheadline {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.2rem;
+}
+
+.section {
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  font-weight: 300;
+  letter-spacing: 0.10em;
+}
