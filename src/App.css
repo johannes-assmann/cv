@@ -1,46 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+@layer theme, base, components, utilities;
+@layer base {
+  a {
+    @apply text-inherit no-underline;
+  }
+  img {
+    @apply inline-block;
+  }
+}
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
 #root {
   margin: 0 auto;
+  text-rendering: optimizeLegibility;
+  --inter-font: "Inter", sans-serif;
+  --garamond-font: "EB+Garamond", serif;
+  --roboto-font: "Roboto", sans-serif;
+  --arial-font: "Arial", sans-serif;
+  --default-font: var(--arial-font);
 }
 
-.inter-200 {
-  font-family: "Inter", sans-serif;
+.default-200 {
+  font-family: var(--default-font);
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
 }
 
-.inter-300 {
-  font-family: "Inter", sans-serif;
+.default-300 {
+  font-family: var(--default-font);
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
 
-.inter-400 {
-  font-family: "Inter", sans-serif;
+.default-400 {
+  font-family: var(--default-font);
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.inter-500 {
-  font-family: "Inter", sans-serif;
+.default-500 {
+  font-family: var(--default-font);
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
 
-.inter-700 {
-  font-family: "Inter", sans-serif;
+.default-700 {
+  font-family: var(--default-font);
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
 
 main {
-  .left {
+  .sidebar {
     .list-section {
       .list {
         margin-bottom: 2.0rem;
@@ -55,7 +76,7 @@ main {
       }
     }
   }
-  .right {
+  .content {
     .company, .date {
       padding: 0.1em 0;
     }
@@ -69,9 +90,22 @@ main {
       letter-spacing: 0.12em;
       li {
         padding: 2px;
+        margin-left: 18px;
+      }
+      li::before {
+        content: "• "; /* Unicode bullet */
+        font-size: 1.1em;
+        margin-left: -18px;
+        margin-right: 3px;
       }
     }
   }
+}
+
+
+.color-box {
+  background-color: #c7e4f7;
+  min-height: 32px;
 }
 
 .headline {
